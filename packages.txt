@@ -1,5 +1,5 @@
 libcairo2-dev
 pkg-config
 python3-dev
-libpango
-libpangocairo
+libpango-1.0-0
+libpangocairo-1.0-0
