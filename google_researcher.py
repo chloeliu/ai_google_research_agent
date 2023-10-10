@@ -358,7 +358,7 @@ def main():
         print("\n\nCompling final results")
         prompt_template = """
         Base on the objective for this research: "{objective}",
-        - write the following section as part of a reserach report: "Executive Summary (bullet points finding highlights that answer user request, less than 3), 
+        - write the following section as part of a reserach report: "Executive Summary (bullet points finding highlights that answer user request, less than 3, be brief, and to the point), 
         Analysis and Interpretation(these are observations and patterns you've noticed from the information gathered so far and it is highly relevant to the user request"
         - Use in-text url and references links throughout the writing.
         - Write the reports using markdown style categorizing information so that it is easy for the user to read.
