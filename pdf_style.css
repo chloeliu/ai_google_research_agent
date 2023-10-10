@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Times New Roman';
+    src: url('https://fonts.googleapis.com/css?family=Times+New+Roman');
+}
+
+body {
+    font-family: 'Times New Roman';
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid darkgray;
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+}
