@@ -4,8 +4,9 @@ langchain==0.0.311
 langchain_experimental==0.0.27
 markdown2==2.4.10
 md2pdf==1.0.1
-pdfkit==1.0.0
+pdfkit==1.0.0g
 pydantic==1.10.4
 python-dotenv==1.0.0
 Requests==2.31.0
 streamlit==1.27.1
+openai==0.27.8
