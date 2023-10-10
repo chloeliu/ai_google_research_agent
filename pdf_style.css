@@ -1,10 +1,7 @@
-@font-face {
-    font-family: 'Times New Roman';
-    src: url('https://fonts.googleapis.com/css?family=Times+New+Roman');
-}
+
 
 body {
-    font-family: 'Times New Roman';
+    font-family: 'Times New Roman', Times, serif;
     font-size: 12pt;
 }
 h1 {

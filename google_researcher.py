@@ -326,8 +326,7 @@ def main():
 
 
 
-    if col1.button('Generate Report') or (query and st.session_state.search_triggered == False):
-        
+    if col1.button('Generate Report') and (query and st.session_state.search_triggered == False):        
         st.session_state.search_triggered = True
         stop_button = col2.button("Stop")
         if stop_button:
