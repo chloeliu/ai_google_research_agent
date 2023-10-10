@@ -6,7 +6,7 @@ from langchain.callbacks.manager import Callbacks
 from langchain.chains.base import Chain
 
 from schema_local import StepResponse
-from langchain_experimental.pydantic_v1 import BaseModel, validator
+from langchain.pydantic_v1 import BaseModel, validator
 from langchain.schema import (
     AgentAction,
     AgentFinish,

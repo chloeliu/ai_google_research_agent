@@ -14,7 +14,7 @@ from langchain_experimental.plan_and_execute.schema import (
     BaseStepContainer,
     ListStepContainer,
 )
-from langchain_experimental.pydantic_v1 import Field
+from langchain.pydantic_v1 import Field
 from langchain.memory import ConversationBufferMemory
 import streamlit as st
 

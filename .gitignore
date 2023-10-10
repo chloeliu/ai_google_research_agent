@@ -2,3 +2,4 @@
 .env
 test_server.py
 ./backup
+report.pdf
