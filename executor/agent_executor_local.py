@@ -47,7 +47,7 @@ import os
 
 
 load_dotenv()
-openai_api_key = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 system_message = SystemMessage(
     content="""You are a world class researcher, who can do detailed research on any topic and produce facts based results; 
@@ -68,7 +68,7 @@ agent_kwargs = {
     "system_message": system_message,
 }
 
-llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-16k-0613")
+llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-16k-0613",openai_api_key=OPENAI_API_KEY)
 memory = ConversationSummaryBufferMemory(
     memory_key="chat_history", return_messages=True, llm=llm, max_token_limit=500)
 
