@@ -52,7 +52,7 @@ llm = OpenAI(temperature=0)
 llm_math_chain = LLMMathChain.from_llm(llm=llm, verbose=True)
 
 def save_to_pdf(markdown_content, output_filename="report.pdf"):
-    css_path = "pdf_style.css"
+    css_path = "./pdf_style.css"
     # Convert the markdown content to PDF using md2pdf
     md2pdf(output_filename, md_content=markdown_content,css_file_path=css_path)
 
@@ -318,9 +318,20 @@ def main():
         st.session_state.summarized_result = ""
     if "report_generated" not in st.session_state:
         st.session_state.report_generated = False
+    if "stop_research" not in st.session_state:
+        st.session_state.stop_research = False        
 
-    if query and not st.session_state.search_triggered: 
+    col1, col2 = st.columns(2)
+
+
+
+
+    if col1.button('Generate Report') or (query and st.session_state.search_triggered == False):
+        
         st.session_state.search_triggered = True
+        stop_button = col2.button("Stop")
+        if stop_button:
+            st.session_state.stop_research = True
         model4 = ChatOpenAI(temperature=0,model_name="gpt-4")
         model = ChatOpenAI(temperature=0,model_name="gpt-3.5-turbo-16k-0613")
         planner = load_chat_planner(model4,tools)
@@ -336,6 +347,11 @@ def main():
             print("-",p_step.value,'\n')
             status.write('\u2192    ' + p_step.value, expanded=False)
         status.update(expanded=False,state='complete')            
+        if st.session_state.stop_research:
+            st.warning("Research process halted by the user.")
+            st.session_state.search_triggered = False
+            st.session_state.stop_research = False
+            st.stop()        
         executor =load_agent_executor(model, tools, verbose=True)
         agent = PlanAndExecute(planner=planner, executor=executor, verbose=True)     
         response=agent.run(inputs)

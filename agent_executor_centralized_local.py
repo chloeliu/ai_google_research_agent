@@ -58,6 +58,12 @@ class PlanAndExecute(Chain):
         step_counter=0
         for step in plan.steps:            
             step_counter=step_counter+1
+            if st.session_state.stop_research:
+                st.warning("Research process halted by the user.")
+                st.session_state.search_triggered = False
+                st.session_state.stop_research = False
+                st.stop() 
+                break
             # print(step)
             # for prev_step, _ in self.step_container.steps:
             #     print(prev_step)            
