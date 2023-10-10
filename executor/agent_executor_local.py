@@ -42,6 +42,12 @@ from langchain.agents import initialize_agent, Tool
 
 # from langchain_experimental.plan_and_execute.executors.base import ChainExecutor
 from executor.base_local import ChainExecutor
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
 system_message = SystemMessage(
     content="""You are a world class researcher, who can do detailed research on any topic and produce facts based results; 
@@ -62,7 +68,7 @@ agent_kwargs = {
     "system_message": system_message,
 }
 
-llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-16k-0613",openai_api_key="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")
+llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-16k-0613")
 memory = ConversationSummaryBufferMemory(
     memory_key="chat_history", return_messages=True, llm=llm, max_token_limit=500)
 
