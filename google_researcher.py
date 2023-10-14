@@ -360,7 +360,7 @@ def main():
         Base on the objective for this research: "{objective}",
         - write the following sections of a reserach report: 
         -- "Executive Summary (bullet points of conclusiosn and key points from findings that answer user request, less than 3, be short and cociese, and to the point)
-        -- "Analysis and Interpretation" (observations and patterns you've noticed from the information gathered so far and it is highly relevant to the user request"
+        -- "Analysis and Interpretation" (analyze the information and find patterns you've noticed"
         - link in-text url and references links throughout the section
         - Write the reports using markdown style categorizing information so that it is easy for the user to read.
         - Use table with 2+ colummns to organize information so it's easier to read.
@@ -376,7 +376,7 @@ def main():
         prompt_template = """
         Base on the objective for this research: "{objective}",
         - write the following sections as part of an overall report: 
-        -- Detail findings (reference url and summaries or snippet of reference articles in reporting format break down in sub-sections if needed), 
+        -- Detail findings ( brief of observation, reference url and summaries or snippet of reference articles in reporting format break down in sub-sections if needed), 
         -- Key Resources (list of referenced resources by category) 
         -- Method (list the research steps you've taken for this report in short bullet point)",        
         - link text to relevant url and references links throughout the section
