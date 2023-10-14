@@ -358,12 +358,13 @@ def main():
         print("\n\nCompling final results")
         prompt_template = """
         Base on the objective for this research: "{objective}",
-        - write the following section as part of a reserach report: "Executive Summary (bullet points finding highlights that answer user request, less than 3, be brief, and to the point), 
-        Analysis and Interpretation(these are observations and patterns you've noticed from the information gathered so far and it is highly relevant to the user request"
-        - Use in-text url and references links throughout the writing.
+        - write the following sections of a reserach report: 
+        -- "Executive Summary (bullet points finding highlights that answer user request, less than 3, be short and cociese, and to the point)
+        -- "Analysis and Interpretation" (observations and patterns you've noticed from the information gathered so far and it is highly relevant to the user request"
+        - link in-text url and references links throughout the section
         - Write the reports using markdown style categorizing information so that it is easy for the user to read.
         - Use table with 2+ colummns to organize information so it's easier to read.
-        - Don't make up fact, use fact from the resources you found.
+        - Don't make up fact, use fact from the information you've found.
          ```{results}```
         """
         llm_chain = LLMChain(
@@ -374,9 +375,11 @@ def main():
 
         prompt_template = """
         Base on the objective for this research: "{objective}",
-        - write the following sections as part of an overall report: "Detail findings (detailed  findings in reporting format break down in sub-sections if needed), Key Resources (list of resources by category) 
-Method (list the step you've taken in short bullet point)",        
-        - In every section, use text url and references links throughout the writing.
+        - write the following sections as part of an overall report: 
+        --Detail findings (reference url and snippet of reference articles in reporting format break down in sub-sections if needed), 
+        -- Key Resources (list of referenced resources by category) 
+        -- Method (list the research steps you've taken for this report in short bullet point)",        
+        - link text to relevant url and references links throughout the section
         - Write sections using markdown style categorizing information so that it is easy for the user to read.
         - Use table with 2+ colummns to organize information so it's easier to read.
         - Don't make up fact, use fact from the resources you found.
