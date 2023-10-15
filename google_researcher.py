@@ -359,7 +359,7 @@ def main():
         prompt_template = """
         Base on the objective for this research: "{objective}",
         - write the following sections of a reserach report: 
-        -- "Executive Summary (bullet points of conclusiosn and key points from findings that answer user request, less than 3, be short and cociese, and to the point)
+        -- "Executive Summary (bullet points of key conclusions that answer user request, less than 3, be short and cociese, and to the point, use reference url)
         -- "Analysis and Interpretation" (analyze the information and find patterns you've noticed"
         - link in-text url and references links throughout the section
         - Write the reports using markdown style categorizing information so that it is easy for the user to read.
