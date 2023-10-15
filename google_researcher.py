@@ -63,7 +63,7 @@ def search(objective: str, query: str):
 
     payload = json.dumps({
         "q": query,
-        "num": 3
+        "num": 5
           #limit the number of search results
     })
     if query=="" or query==None or query=="string":
@@ -360,7 +360,7 @@ def main():
         Base on the objective for this research: "{objective}",
         - write the following sections of a reserach report: 
         -- "Executive Summary (summary and draw conclusions in less than 3 bullet points in answering the objective directly and precisely: be short, cociese, use reference url)
-        -- "Analysis and Interpretation" (analyze the information and find patterns you've noticed"
+        -- "Analysis and Interpretation" (analyze the information based on patterns you've noticed)"
         - link in-text url and references links throughout the section
         - Write the reports using markdown style categorizing information so that it is easy for the user to read.
         - Use table with 2+ colummns to organize information so it's easier to read.
@@ -376,8 +376,8 @@ def main():
         prompt_template = """
         Base on the objective for this research: "{objective}",
         - write the following sections as part of an overall report: 
-        -- Detail findings ( brief of observation, reference url and summaries or snippet of reference articles in reporting format break down in sub-sections if needed), 
-        -- Key Resources (list of referenced resources by category) 
+        -- Detail findings (break down in sub-sections if needed, brief the observations , summaries or snippet of reference articles), 
+        -- Key Resources (list of referenced resources by the sub-sections) 
         -- Method (list the research steps you've taken for this report in short bullet point)",        
         - link text to relevant url and references links throughout the section
         - Write sections using markdown style categorizing information so that it is easy for the user to read.
