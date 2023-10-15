@@ -377,13 +377,14 @@ def main():
         Base on the objective for this research: "{objective}",
         - write the following sections as part of an overall report: 
         -- Detail findings (break down in sub-sections if needed, brief the observations , summaries or snippet of reference articles), 
-        -- Key Resources (list of referenced resources by the sub-sections) 
+        -- References (list of referenced resources by the sub-sections) 
         -- Method (list the research steps you've taken for this report in short bullet point)",        
         - link text to relevant url and references links throughout the section
         - Write sections using markdown style categorizing information so that it is easy for the user to read.
         - Use table with 2+ colummns to organize information so it's easier to read.
         - Don't make up fact, use fact from the resources you found.
          ```{results}```
+         Detail findings:
         """
         llm_chain = LLMChain(
         llm=model,
