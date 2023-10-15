@@ -359,9 +359,9 @@ def main():
         prompt_template = """
         Base on the objective for this research: "{objective}",
         - write the following sections of a reserach report: 
-        -- "Executive Summary (summary and draw conclusions in less than 3 bullet points in answering the objective directly and precisely: be short, cociese, use reference url)
+        -- "Executive Summary (draw conclusion from observation and summarize in less than 3 bullet points in answering the objective directly and precisely: be short, cociese, use reference url)
         -- "Analysis and Interpretation" (analyze the information based on patterns you've noticed)"
-        - link in-text url and references links throughout the section
+        - Reference source url throughout the paragraph when appropriate
         - Write the reports using markdown style categorizing information so that it is easy for the user to read.
         - Use table with 2+ colummns to organize information so it's easier to read.
         - Don't make up fact, use fact from the information you've found.
@@ -375,16 +375,15 @@ def main():
 
         prompt_template = """
         Base on the objective for this research: "{objective}",
-        - write the following sections as part of an overall report: 
-        -- Detail findings (break down in sub-sections if needed, brief the observations , summaries or snippet of reference articles), 
+        - write the following sections as part of an overall report(no need to write title for the report): 
+        -- Detail findings (break down in sub-sections if needed, brief the observations in details for the sub-section topic,reference source articles), 
         -- References (list of referenced resources and its name) 
         -- Method (list the research steps you've taken for this report in short bullet point)",        
-        - link text to relevant url and references links throughout the section
+        - Reference source url throughout the paragraph when appropriate
         - Write sections using markdown style categorizing information so that it is easy for the user to read.
         - Use table with 2+ colummns to organize information so it's easier to read.
         - Don't make up fact, use fact from the resources you found.
          ```{results}```
-         Detail findings:
         """
         llm_chain = LLMChain(
         llm=model,
