@@ -284,10 +284,11 @@ global expander
 def main():
 
     st.set_page_config(
-    page_title="Google Search and Research",
-    page_icon="🤖",
+    page_title="Google Search and Researcher",
     # layout="wide"
     )        
+    st.header("Let AI help you with Google research")
+
     st.markdown('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|Roboto+Condensed:400,700&display=swap" />', unsafe_allow_html=True)
     st.markdown(f'''
         <style>
