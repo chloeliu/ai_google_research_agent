@@ -12,3 +12,4 @@ streamlit==1.27.1
 openai==0.27.8
 numexpr==2.8.4
 tiktoken==0.4.0
+uvicorn==0.23.2
